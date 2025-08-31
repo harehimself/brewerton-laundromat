@@ -11,29 +11,26 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-blue-600">cents</span>
+              <span className="text-2xl font-bold text-blue-600">Brewerton Laundromat</span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#" className="text-gray-600 hover:text-gray-900">
-                Solutions
+                Services
               </a>
               <a href="#" className="text-gray-600 hover:text-gray-900">
-                Operator Stories
+                Hours
               </a>
               <a href="#" className="text-gray-600 hover:text-gray-900">
-                Resources
+                About Us
               </a>
               <a href="#" className="text-gray-600 hover:text-gray-900">
-                Company
+                Contact
               </a>
               <a href="#" className="text-gray-600 hover:text-gray-900">
-                Pricing
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Login
+                Get Directions
               </a>
             </nav>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">Schedule Demo</Button>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">Call Now</Button>
           </div>
         </div>
       </header>
@@ -291,9 +288,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <span className="text-2xl font-bold text-blue-400">cents</span>
+              <span className="text-2xl font-bold text-blue-400">Brewerton Laundromat</span>
               <p className="mt-4 text-gray-400">
-                The most integrated laundry and dry cleaning business management system.
+                A clean, modern, and family-friendly laundromat servicing Brewerton, NY and surrounding areas.
               </p>
             </div>
             <div>
@@ -373,7 +370,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Cents. All rights reserved.</p>
+            <p>&copy; 2024 Brewerton Laundromat. All rights reserved.</p>
           </div>
         </div>
       </footer>
