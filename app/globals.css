@@ -1,8 +1,13 @@
+/* globals.css */
+
+/* Tailwind + animations */
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* Dark variant helper for CSS variables */
 @custom-variant dark (&:is(.dark *));
 
+/* ---------- Design Tokens (OKLCH) ---------- */
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -23,12 +28,15 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
+
   --radius: 0.625rem;
+
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -59,11 +67,13 @@
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
+
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
+
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -74,37 +84,50 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+/* ---------- Tailwind Theme Mapping ---------- */
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -115,11 +138,42 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* ---------- Base Layer (no global outlines) ---------- */
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+  /* Set default border color only */
+  * { @apply border-border; }
+
+  /* Respect keyboard users without causing tap-jitter */
+  *:where(:focus-visible) { @apply outline-2 outline-offset-2 outline-ring/50; }
+
+  /* App background + text color */
+  body { @apply bg-background text-foreground; }
 }
+
+/* ---------- Mobile Drift Guards & Utilities ---------- */
+
+/* Viewport/overflow hardening */
+html, body { height: 100%; }
+body { overflow-x: hidden; overscroll-behavior: none; }
+
+/* Prevent flex/grid children from forcing width overflow */
+* { min-width: 0; }
+
+/* Media should never exceed viewport; block fixes inline-gap quirks */
+img, svg, video, canvas { max-width: 100%; height: auto; display: block; }
+
+/* Safer full-height on mobile (avoid classic 100vh issues) */
+.fullscreen { min-height: 100svh; min-height: 100dvh; }
+
+/* Clip rare subpixel overflows (use on page root/container) */
+.no-x-drift { max-width: 100vw; overflow-x: clip; }
+
+/* Long-word safety (useful for badges/URLs) */
+.break-any { word-break: break-word; overflow-wrap: anywhere; }
+
+/* Smooth fixed elements on mobile (headers/footers) */
+.fixed-smooth { will-change: transform; transform: translateZ(0); }
+
+/* Safe-area helpers for edge-pinned elements */
+.pad-safe-top { padding-top: env(safe-area-inset-top); }
+.pad-safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
