@@ -44,10 +44,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl font-bold text-gray-900 mb-6 text-balance">
-                One system powering your entire laundry business
+                Effortless Laundry. Right here in Brewerton.
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                The most integrated laundry and dry cleaning business management system in the industry.
+                Brewerton Laundromat brings brand-new, high-speed washers & dryers to your neighborhood, delivering spotless loads in record time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
@@ -58,7 +58,7 @@ export default function Home() {
                   variant="outline"
                   className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent"
                 >
-                  Schedule a Demo
+                  Get Directions
                 </Button>
               </div>
               <div className="flex items-center gap-2">
@@ -67,7 +67,7 @@ export default function Home() {
                     <Star key={i} className="w-5 h-5 fill-blue-500 text-blue-500" />
                   ))}
                 </div>
-                <span className="text-sm text-gray-600">Trusted by customer reviews</span>
+                <span className="text-sm text-gray-600">Trusted by your Brewerton neighbors</span>
               </div>
             </div>
             <div className="relative">
@@ -81,19 +81,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Stores Love Cents */}
+      {/* Why Locals Choose Brewerton Laundromat */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Why 4,000+ stores love Cents</h2>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Why locals choose Brewerton Laundromat</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Settings className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Point of Sale</h3>
+                <h3 className="text-xl font-semibold mb-3">Fast Cycles</h3>
                 <p className="text-gray-600">
-                  Process orders, sales, and payments in one system designed for the industry.
+                  Finish a week’s laundry in under an hour with 450 G-force extract washers.
                 </p>
               </CardContent>
             </Card>
@@ -103,9 +103,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Smartphone className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Machine Integration</h3>
+                <h3 className="text-xl font-semibold mb-3">Flexible Payment</h3>
                 <p className="text-gray-600">
-                  Keep everything about your machines integrated with your POS, including what's going on.
+                  Tap, swipe, or insert coins—whatever’s easiest.
                 </p>
               </CardContent>
             </Card>
@@ -115,9 +115,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <BarChart3 className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Business Management</h3>
+                <h3 className="text-xl font-semibold mb-3">Oversize Loads Welcome</h3>
                 <p className="text-gray-600">
-                  Access everything from the business manager to see the big picture and understand your business.
+                  Our machines tackle comforters, camping gear, and bulky items with ease.
                 </p>
               </CardContent>
             </Card>
@@ -127,9 +127,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Truck className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Pickup & Delivery</h3>
+                <h3 className="text-xl font-semibold mb-3">Always Clean, Always Safe</h3>
                 <p className="text-gray-600">
-                  Connect your online with pickup and delivery, getting your customers in the app efficiently.
+                  Attendants sanitize surfaces throughout the day; security cameras run 24/7.
                 </p>
               </CardContent>
             </Card>
@@ -140,23 +140,22 @@ export default function Home() {
               <img src="/smiling-woman-working-at-laundromat-counter.png" alt="Happy laundromat employee" className="rounded-lg shadow-lg" />
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Built for your success</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">Built around your convenience</h3>
               <p className="text-lg text-gray-600 mb-8">
-                Our platform is designed specifically for laundry and dry cleaning businesses, with features that help
-                you streamline operations and grow your revenue.
+                Purpose-built for today’s self-service and wash-dry-fold customers, our facility streamlines every step of laundry day so you get more time back.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Easy to use interface</span>
+                  <span className="text-gray-700">Intuitive machine controls</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">24/7 customer support</span>
+                  <span className="text-gray-700">Comfortable Seatiing and Amenities</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Industry-specific features</span>
+                  <span className="text-gray-700">Open 6:00 AM – 10:00 PM; with last wash at 9:00 PM</span>
                 </div>
               </div>
             </div>
@@ -168,51 +167,26 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-blue-800/90"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Solutions that work better together</h2>
+          <h2 className="text-4xl font-bold mb-6">Amenities that work better together</h2>
           <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            Our integrated platform connects every aspect of your business, so you have everything you need in one
-            system.
+            Everything is integrated under one roof, so switching between services is seamless—and your clothes stay on a single, secure track from start to finish.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
-              Business Management & POS
+              Freshly Remodeled Facility
             </Badge>
             <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
-              Pickup & Delivery
+              Brand New Machines
             </Badge>
             <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
-              Payment Systems
+              Self-Service
             </Badge>
             <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
-              AI Cost Cutter
+              Wash-Dry-Fold
             </Badge>
             <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
-              Marketing Tools
+              Secure & Family Friendly
             </Badge>
-          </div>
-        </div>
-      </section>
-
-      {/* Transform Operations */}
-      <section className="py-20 bg-gradient-to-br from-blue-700 to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-4xl font-bold mb-6">Transform your operations</h2>
-              <p className="text-xl text-blue-100 mb-8">
-                Streamline your entire business with our comprehensive platform designed specifically for laundry and
-                dry cleaning operations.
-              </p>
-              <Button size="lg" variant="secondary" className="bg-white text-blue-700 hover:bg-blue-50">
-                Learn More
-              </Button>
-            </div>
-            <div className="relative">
-              <img src="/modern-laundry-business-dashboard-on-tablet.png" alt="Business dashboard" className="rounded-lg shadow-2xl" />
-            </div>
           </div>
         </div>
       </section>
@@ -225,11 +199,9 @@ export default function Home() {
               <img src="/team-of-laundry-business-professionals-collaborati.png" alt="Team collaboration" className="rounded-lg shadow-lg" />
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Your partner in success</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Your neighborhood laundry partner</h2>
               <p className="text-lg text-gray-600 mb-8">
-                We're more than just software - we're your partner in innovating and growing a laundromat. That's why we
-                provide an industry-leading customer support and success team dedicated to helping you reach your
-                business goals.
+                 We’re more than a room full of machines—we’re Brewerton locals committed to making laundry day the easiest hour of your week. Count on friendly attendants, clear pricing, and quick answers whenever you need help.
               </p>
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                 Learn how we can help
