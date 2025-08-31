@@ -8,12 +8,12 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="border-b border-gray-100 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16 sm:h-20">
+            <div className="flex items-center min-w-0">
               <div className="flex flex-col">
-                <span className="text-xl font-semibold text-blue-600 tracking-tight">Brewerton</span>
-                <span className="text-base font-medium text-gray-700 -mt-0.5 tracking-wider">LAUNDROMAT</span>
+                <span className="text-lg sm:text-xl font-semibold text-blue-600 tracking-tight">Brewerton</span>
+                <span className="text-sm sm:text-base font-medium text-gray-700 -mt-0.5 tracking-wider">LAUNDROMAT</span>
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
@@ -33,48 +33,48 @@ export default function Home() {
                 Get Directions
               </a>
             </nav>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium">Call Now</Button>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm px-3 sm:px-4 py-2">Call Now</Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-6 text-balance">
+      <section className="bg-gradient-to-br from-blue-50 to-white py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 text-balance leading-tight">
                 Effortless Laundry. Right here in Brewerton.
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 Brewerton Laundromat brings brand-new, high-speed washers & dryers to your neighborhood, delivering spotless loads in record time.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto">
                   Learn More
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent w-full sm:w-auto"
                 >
                   Get Directions
                 </Button>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 justify-center sm:justify-start">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-blue-500 text-blue-500" />
+                    <Star key={i} className="w-4 sm:w-5 h-4 sm:h-5 fill-blue-500 text-blue-500" />
                   ))}
                 </div>
-                <span className="text-sm text-gray-600">Trusted by your Brewerton neighbors</span>
+                <span className="text-xs sm:text-sm text-gray-600">Trusted by your Brewerton neighbors</span>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative order-1 lg:order-2">
               <img
                 src="/modern-laundromat-with-washing-machines-in-a-row.png"
                 alt="Modern laundromat with washing machines"
-                className="rounded-lg shadow-2xl"
+                className="rounded-lg shadow-2xl w-full h-auto"
               />
             </div>
           </div>
@@ -82,10 +82,10 @@ export default function Home() {
       </section>
 
       {/* Why Locals Choose Brewerton Laundromat */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Why locals choose Brewerton Laundromat</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-12 lg:mb-16">Why locals choose Brewerton Laundromat</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -135,14 +135,14 @@ export default function Home() {
             </Card>
           </div>
 
-          <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img src="/smiling-woman-working-at-laundromat-counter.png" alt="Happy laundromat employee" className="rounded-lg shadow-lg" />
+          <div className="mt-12 sm:mt-16 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <img src="/smiling-woman-working-at-laundromat-counter.png" alt="Happy laundromat employee" className="rounded-lg shadow-lg w-full h-auto" />
             </div>
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Built around your convenience</h3>
-              <p className="text-lg text-gray-600 mb-8">
-                Purpose-built for today’s self-service and wash-dry-fold customers, our facility streamlines every step of laundry day so you get more time back.
+            <div className="order-1 lg:order-2">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Built around your convenience</h3>
+              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+                Purpose-built for today's self-service and wash-dry-fold customers, our facility streamlines every step of laundry day so you get more time back.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -164,27 +164,27 @@ export default function Home() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-blue-800/90"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Amenities that work better together</h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
+        <div className="relative max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Amenities that work better together</h2>
+          <p className="text-base sm:text-lg lg:text-xl text-blue-100 mb-8 sm:mb-12 max-w-3xl mx-auto">
             Everything is integrated under one roof, so switching between services is seamless—and your clothes stay on a single, secure track from start to finish.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
+            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm">
               Freshly Remodeled Facility
             </Badge>
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
+            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm">
               Brand New Machines
             </Badge>
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
+            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm">
               Self-Service
             </Badge>
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
+            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm">
               Wash-Dry-Fold
             </Badge>
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
+            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm">
               Secure & Family Friendly
             </Badge>
           </div>
@@ -192,18 +192,18 @@ export default function Home() {
       </section>
 
       {/* Partner Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img src="/team-of-laundry-business-professionals-collaborati.png" alt="Team collaboration" className="rounded-lg shadow-lg" />
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <img src="/team-of-laundry-business-professionals-collaborati.png" alt="Team collaboration" className="rounded-lg shadow-lg w-full h-auto" />
             </div>
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Your neighborhood laundry partner</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                 We’re more than a room full of machines—we’re Brewerton locals committed to making laundry day the easiest hour of your week. Count on friendly attendants, clear pricing, and quick answers whenever you need help.
+            <div className="order-1 lg:order-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Your neighborhood laundry partner</h2>
+              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+                 We're more than a room full of machines—we're Brewerton locals committed to making laundry day the easiest hour of your week. Count on friendly attendants, clear pricing, and quick answers whenever you need help.
               </p>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto">
                 Learn how we can help
               </Button>
             </div>
