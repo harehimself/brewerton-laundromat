@@ -7,30 +7,33 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="border-b border-gray-100 bg-white">
+      <header className="border-b border-gray-100 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-blue-600">Brewerton Laundromat</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-semibold text-blue-600 tracking-tight">Brewerton</span>
+                <span className="text-base font-medium text-gray-700 -mt-0.5 tracking-wider">LAUNDROMAT</span>
+              </div>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-sm">
                 Services
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-sm">
                 Hours
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-sm">
                 About Us
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-sm">
                 Contact
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-sm">
                 Get Directions
               </a>
             </nav>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">Call Now</Button>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium">Call Now</Button>
           </div>
         </div>
       </header>
@@ -288,8 +291,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <span className="text-2xl font-bold text-blue-400">Brewerton Laundromat</span>
-              <p className="mt-4 text-gray-400">
+              <div className="flex flex-col mb-4">
+                <span className="text-lg font-semibold text-blue-400 tracking-tight">Brewerton</span>
+                <span className="text-sm font-medium text-gray-500 -mt-0.5 tracking-wider">LAUNDROMAT</span>
+              </div>
+              <p className="text-gray-400 leading-relaxed">
                 A clean, modern, and family-friendly laundromat servicing Brewerton, NY and surrounding areas.
               </p>
             </div>
